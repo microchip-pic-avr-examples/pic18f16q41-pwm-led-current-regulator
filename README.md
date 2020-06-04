@@ -68,7 +68,7 @@ The maximum output of this setup is **150.8mA**, assuming no limitations from th
 Due to the MOSFET acting as voltage controlled current sink, there is some short circuit protection built into the circuit. However, it is not recommended to depend on this circuit as the only means of protection. Prolonged short circuits may cause heating.
 
 ## Reducing the Maximum Current
-To reduce the maximum current through the LED (without changing the value of the shunt), the operational amplifier (OPA) module can be used to multiply the shunt voltage, lowering the current limit.
+To reduce the maximum current through the LED (without changing the value of the shunt), the operational amplifier (OPA) module can be used to multiply the voltage on the current sense line. This causes the comparator to switch states at a lower current. 
 
 ## High Voltage Operation
 This code example can be run at voltages in excess of Vdd. Running at a higher voltage enables more LEDs to be strung together in series. However, some circuit modifications should be made to handle the higher voltages and power.
