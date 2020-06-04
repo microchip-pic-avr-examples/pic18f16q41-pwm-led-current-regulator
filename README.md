@@ -59,7 +59,7 @@ To generate the breathing effect, the DAC output generates a triangle wave which
 
 **Iout = Vdac / 6.8**
 
-The maximum output of this setup is **150.8mA**, assuming no limitations from the power supply. 
+The maximum output of this setup is **150.8mA**, assuming no limitations from the power supply.
 
 <img src="images/currentSense.PNG" alt="Breathing Waveform" width="500px"/><br>
 *Current through the MOSFET*
@@ -67,7 +67,7 @@ The maximum output of this setup is **150.8mA**, assuming no limitations from th
 #### Short Circuit Protection
 Due to the MOSFET acting as voltage controlled current sink, there is some short circuit protection built into the circuit. However, it is not recommended to depend on this circuit as the only means of protection. Prolonged short circuits may cause heating.
 
-## Lower Current Operation
+## Reducing the Maximum Current
 To reduce the maximum current through the LED (without changing the value of the shunt), the operational amplifier (OPA) module can be used to multiply the shunt voltage, lowering the current limit.
 
 ## High Voltage Operation
