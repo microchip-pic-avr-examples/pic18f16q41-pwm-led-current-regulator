@@ -2,7 +2,7 @@
 <a href="https://www.microchip.com" rel="nofollow"><img src="images/microchip.png" alt="MCHP" width="300"/></a>
 
 # Switching LED Current Regulator using PIC18F16Q41
-This code example implements a linear low-side current regulator for LEDs using the PIC18F16Q41's digital-to-analog converter (DAC), comparator, and a handful of external components. The operational amplifier (OPA) module on the PIC18F16Q41 can be used in this demo to reduce the maximum current.
+This code example implements a linear low-side current regulator for LEDs using the PIC18F16Q41's digital-to-analog converter (DAC), comparator, and a handful of external components. The operational amplifier (OPA) module on the PIC18F16Q41 can be used in this demo to reduce the maximum current output range of the circuit.
 
 ## Related Documentation
 
@@ -86,4 +86,4 @@ This code example can be run at voltages in excess of Vdd. Running at a higher v
 **Important!** If an I/O associated with the PIC18F16Q41 exceeds Vdd or Vss, then the device will be permanently damaged.
 
 ## Summary
-This code example demonstrates the use of the comparator and DAC on the PIC18F16Q41 to control the current through LED(s) with little CPU overhead required.  
+With a few external parts, the analog peripherals on the PIC18F16Q41 can be used to control the current through an LED.
