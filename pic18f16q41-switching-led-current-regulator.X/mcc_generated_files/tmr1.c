@@ -71,14 +71,14 @@ void TMR1_Initialize(void)
     //GSS T1GPPS; 
     T1GATE = 0x00;
 
-    //CS LFINTOSC; 
-    T1CLK = 0x04;
+    //CS HFINTOSC; 
+    T1CLK = 0x03;
 
     //TMR1H 255; 
     TMR1H = 0xFF;
 
-    //TMR1L 255; 
-    TMR1L = 0xFF;
+    //TMR1L 147; 
+    TMR1L = 0x93;
 
     // Clearing IF flag before enabling the interrupt.
     PIR3bits.TMR1IF = 0;
@@ -92,8 +92,8 @@ void TMR1_Initialize(void)
     // Set Default Interrupt Handler
     TMR1_SetInterruptHandler(TMR1_DefaultInterruptHandler);
 
-    // CKPS 1:1; NOT_SYNC synchronize; TMR1ON enabled; T1RD16 disabled; 
-    T1CON = 0x01;
+    // CKPS 1:1; NOT_SYNC do_not_synchronize; TMR1ON enabled; T1RD16 disabled; 
+    T1CON = 0x05;
 }
 
 void TMR1_StartTimer(void)
@@ -169,7 +169,7 @@ void TMR1_ISR(void)
     PIR3bits.TMR1IF = 0;
     TMR1_WriteTimer(timer1ReloadVal);
 
-    // callback function - called every 20th pass
+    // callback function - called every 750th pass
     if (++CountCallBack >= TMR1_INTERRUPT_TICKER_FACTOR)
     {
         // ticker function call

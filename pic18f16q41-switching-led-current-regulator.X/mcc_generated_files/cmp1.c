@@ -67,8 +67,8 @@ void CMP1_Initialize(void)
 	// NCH CIN3-;                          
     CM1NCH = 0x03;
 	
-	// PCH CIN0+;                          
-    CM1PCH = 0x00;
+	// PCH DACOUT;                          
+    CM1PCH = 0x05;
 	
 }
 

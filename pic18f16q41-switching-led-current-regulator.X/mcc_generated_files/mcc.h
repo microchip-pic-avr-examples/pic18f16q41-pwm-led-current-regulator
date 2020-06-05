@@ -54,9 +54,10 @@
 #include <conio.h>
 #include "interrupt_manager.h"
 #include "fvr.h"
-#include "dac1.h"
 #include "tmr1.h"
 #include "cmp1.h"
+#include "dac2.h"
+#include "opa1.h"
 
 
 
