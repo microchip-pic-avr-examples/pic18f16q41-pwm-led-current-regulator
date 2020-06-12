@@ -26,7 +26,7 @@ The following documents and resources will be published soon.
 ## External Parts Required
 
 * 6.8 ohm resistor (current shunt)
-* *(Optional)* 100k resistor
+* 100k resistor
     * This resistor discharges the capacitor passively and ensures the MOSFET remains off if the part is off or the pin is tri-stated. For this example, it is not needed.
 * 10k resistor
 * 0.1uF capacitor
@@ -61,7 +61,9 @@ If using the current sense amplifier to reduce the current range, the following 
 | RB5 | OPA1IN0+ (connect to the current shunt)
 | RC2 | OPA1OUT (connect to RC3)
 
-## Operation
+## Operation<br>
+<img src="images/demo.gif" alt="Amplified Diagram"/><br>
+
 This code example regulates the current through the LED(s) to generate a breathing effect. The MOSFET acts as a voltage-controlled current sink. To set the voltage on the MOSFET's gate, and thus the current through the transistor, the comparator compares the voltage on the current shunt (RC3) with the DAC's level. If the current sensed is less than the set level, the comparator turns on. When the current sensed is greater than or equal to the DAC level, then the comparator turns off. The signal is integrated through the 10k and 0.1uF RC network on the gate of the MOSFET to regulate the transistor.
 
 The comparator is used in synchronous mode with a flip-flop to reduce the switching noise of this regulator.
