@@ -1,8 +1,8 @@
 <!-- Please do not change this html logo with link -->
 <a href="https://www.microchip.com" rel="nofollow"><img src="images/microchip.png" alt="MCHP" width="300"/></a>
 
-# Switching LED Current Regulator using PIC18F16Q41
-This code example implements a linear low-side current regulator for LEDs using the PIC18F16Q41's digital-to-analog converter (DAC), comparator, and a handful of external components. The operational amplifier (OPA) module on the PIC18F16Q41 can be used in this demo to reduce the maximum current output range of the circuit.
+# PWM LED Current Regulator using PIC18F16Q41
+This code example implements a linear low-side current regulator for LEDs using the PIC18F16Q41's digital-to-analog converter (DAC), comparator, and a handful of external components. The operational amplifier (OPA) module on the PIC18F16Q41 can be used in this demo to reduce the value of the shunt resistor or to reduce the current output range of the circuit.
 
 ## Related Documentation
 
@@ -85,7 +85,7 @@ By using the OPA module in a gain of 8 reduces the current output range to a max
 Due to the MOSFET acting as voltage controlled current sink, there is some short circuit protection built into the circuit. However, it is not recommended to depend on this circuit as the only means of protection. Prolonged short circuits may cause heating.
 
 ## High Voltage Operation
-This code example can be run at voltages in excess of Vdd. Running at a higher voltage enables more LEDs to be strung together in series. However, some circuit modifications should be made to handle the higher voltages and power.
+This code example can be run at voltages in excess of Vdd. Running at a higher voltage enables more LEDs to be strung together in series. However, some modifications to the circuit should be made to handle the higher voltages and power.
 
 **Important!** If an I/O associated with the PIC18F16Q41 exceeds Vdd or Vss, then the device will be permanently damaged.
 
