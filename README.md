@@ -28,7 +28,7 @@ The following documents and resources will be published soon.
 * 6.8 ohm resistor (current shunt)
 * 100k resistor
     * This resistor discharges the capacitor passively and ensures the MOSFET remains off if the part is off or the pin is tri-stated. For this example, it is not needed.
-* 10k resistor
+* 10k ohm resistor
 * 0.1uF capacitor
 * N-Type MOSFET (rec. signal transistor, such as a 2N7000A)
 * LED
