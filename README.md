@@ -5,6 +5,8 @@
 This code example implements a linear low-side current regulator for LEDs using the PIC18F16Q41's digital-to-analog converter (DAC), comparator, and a handful of external components. The operational amplifier (OPA) module on the PIC18F16Q41 can be used in this demo to reduce the maximum current output range of the circuit.
 
 ## Related Documentation
+
+The following documents and resources will be published soon.
 TBxxxx, "Using Operational Amplifiers in PIC16 and PIC18"<br>
 TBxxxx, "Optimizing Internal Operational Amplifiers for Analog Signal Conditioning"<br>
 ANxxxx, "Analog Sensor Measurement and Acquisition"
