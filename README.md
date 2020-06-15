@@ -13,7 +13,6 @@ ANxxxx, "Analog Sensor Measurement and Acquisition"
 
 <a href="https://github.com/microchip-pic-avr-examples/pic18f16q41-linear-led-current-regulator">Code Example: Linear LED Current Regulator using PIC18F16Q41</a>
 
-The following documents and resources will be published soon.
 ## Software Used
 
 * <a href="http://www.microchip.com/mplab/mplab-x-ide">MPLAB® IDE 5.40 or newer</a>
