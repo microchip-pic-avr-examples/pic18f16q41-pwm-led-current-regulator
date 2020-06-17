@@ -22,7 +22,7 @@ ANxxxx, "Analog Sensor Measurement and Acquisition"
 ## Hardware Used
 
 * <a href="https://www.microchip.com/wwwproducts/en/PIC18F16Q41">PIC18F16Q41</a><br>
-* <a href="https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM164137"> Microchip Curiosity Development Board (DM164137) </a>
+* <a href="https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM164137"> Microchip Curiosity Development Board (DM164137), Rev 4 </a>
 
 ## External Parts Required
 
@@ -33,6 +33,7 @@ ANxxxx, "Analog Sensor Measurement and Acquisition"
 * 0.1uF capacitor
 * N-Type MOSFET (rec. signal transistor, such as a 2N7000A)
 * LED
+* Breadboard
 
 #### Power Dissipation
 Before building or operating this demo, ensure that the parts selected for this demo are appropriately rated for the peak power of this circuit.
