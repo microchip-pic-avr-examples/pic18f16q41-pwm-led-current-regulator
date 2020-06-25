@@ -6,11 +6,9 @@ This code example implements a linear low-side current regulator for LEDs using 
 
 ## Related Documentation
 
-The following documents and resources will be published soon.
 TBxxxx, "Using Operational Amplifiers in PIC16 and PIC18"<br>
 TBxxxx, "Optimizing Internal Operational Amplifiers for Analog Signal Conditioning"<br>
-ANxxxx, "Analog Sensor Measurement and Acquisition"
-
+AN3521, "Analog Sensor Measurement and Acquisition"<br>
 <a href="https://github.com/microchip-pic-avr-examples/pic18f16q41-linear-led-current-regulator">Code Example: Linear LED Current Regulator using PIC18F16Q41</a>
 
 ## Software Used
@@ -47,37 +45,34 @@ The parts that dissipate the most power are the 6.8 ohm shunt resistor, the MOSF
 #### Amplified Wiring Diagram
 <img src="images/amplifiedWiring.png" alt="Amplified Diagram" width="500px"/><br>
 
-#### Required Connections
+#### Connections
 
 | Pin | Function
 | --- | --------
 | RB6 | Comparator Output (connect to the RC network)
-| RC3 | Current Sense Input
+| RC3 | Current Feedback Input
+| RB5 | OPA1IN0+ (see note)
+| RC2 | OPA1OUT (see note)
 
-#### Current Sense Amplifier Connections
-
-If using the current sense amplifier to reduce the current range, the following pins are also needed.
-
-| Pin | Function
-| --- | --------
-| RB5 | OPA1IN0+ (connect to the current shunt)
-| RC2 | OPA1OUT (connect to RC3)
+Note:<br> **If using the operational amplifier**, connect the current shunt output to RB5, then the output of the operational amplifier to RC3. <br>**Otherwise**, connect the current shunt output to RC3 directly.
 
 ## Operation
-<br><img src="images/Demo.gif" alt="Demo GIF"/><br>
+This code example regulates the current through the LED(s) to generate a breathing effect. The MOSFET acts as a voltage-controlled current sink. To set the voltage on the MOSFET's gate, and thus the current through the transistor, the comparator compares the voltage on the current shunt (RC3) with the DAC's level. If the current sensed is less than the set level, the comparator turns on. When the current sensed is greater than or equal to the DAC level, then the comparator turns off. The signal is integrated through the 10k ohm and 0.1uF RC network on the gate of the MOSFET to regulate the transistor. To reduce switching noise, the comparator is used in synchronous mode by latching the output through an internal flip-flop.
+
+Using the internal DAC, almost any arbitrary pattern can be created (flickering for candles, linear brightness control, etc...). The breathing effect was chosen to show the ramp up and down of the current through the LED. The GIF below shows the LED breathing effect.
+
+<br><img src="images/Demo.gif" alt="Demo GIF" width="500px"/><br>
 *Example Output*
 
-This code example regulates the current through the LED(s) to generate a breathing effect. The MOSFET acts as a voltage-controlled current sink. To set the voltage on the MOSFET's gate, and thus the current through the transistor, the comparator compares the voltage on the current shunt (RC3) with the DAC's level. If the current sensed is less than the set level, the comparator turns on. When the current sensed is greater than or equal to the DAC level, then the comparator turns off. The signal is integrated through the 10k ohm and 0.1uF RC network on the gate of the MOSFET to regulate the transistor.
-
-The comparator is used in synchronous mode with a flip-flop to reduce the switching noise of this regulator.
-
-To generate the breathing effect, the DAC output generates a triangle wave which sets the current output through the following formula:
+To generate the effect, the DAC generates a triangle wave which is used by the comparator to set the current through the LED according to the following formula:
 
 **Iout = Vdac / (6.8 x Gain)**
 
-In the unamplified (or gain of 1) configuration, the maximum current is **~150.8mA**, assuming no limitations from the power supply.
+In the unamplified (or gain of 1) configuration, the maximum current is **~151mA**, assuming sufficient headroom on the power supply. (The image below shows the power supply saturate and fail to reach the full range.) Using the OPA module with a gain > 1 can either:
 
-By using the OPA module in a gain of 8 reduces the current output range to a maximum of **~18.85mA**.
+1. Reduce the current output range. The default gain is 8, which limits the current to a maximum of **~19mA**.
+2. Reduce the size of the current shunt resistor, reducing the power dissipated by the resistor.
+<br>
 
 <img src="images/currentSense.PNG" alt="Voltage on Sense Resistor" width="500px"/><br>
 *Voltage Across the Sense Resistor*
