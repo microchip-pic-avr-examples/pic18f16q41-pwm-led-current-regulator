@@ -6,9 +6,9 @@ This code example implements a linear low-side current regulator for LEDs using 
 
 ## Related Documentation
 
-TBxxxx, "Using Operational Amplifiers in PIC16 and PIC18"<br>
-TBxxxx, "Optimizing Internal Operational Amplifiers for Analog Signal Conditioning"<br>
-AN3521, "Analog Sensor Measurement and Acquisition"<br>
+TBxxxx: Using Operational Amplifiers in PIC16 and PIC18<br>
+TBxxxx: Optimizing Internal Operational Amplifiers for Analog Signal Conditioning<br>
+AN3521: Analog Sensor Measurement and Acquisition<br>
 <a href="https://github.com/microchip-pic-avr-examples/pic18f16q41-linear-led-current-regulator">Code Example: Linear LED Current Regulator using PIC18F16Q41</a>
 
 ## Software Used
