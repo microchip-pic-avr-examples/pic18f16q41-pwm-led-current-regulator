@@ -1,0 +1,77 @@
+{
+    "metaDataVersion": "1.0.0",
+    "category": "com.microchip.ide.project",
+    "content": {
+        "metaDataVersion": "1.1.0",
+        "name": "com.microchip.mcu8.mplabx.project.pic18f16q41-pwm-led-current-regulator",
+        "version": "1.0.0",
+        "displayName": "PWM Based Current Regulator with PIC18F16Q41",
+        "projectName": "pic18f16q41-pwm-led-current-regulator",
+        "shortDescription": "PIC18F16Q41 PWM Based LED Current Regulator",
+        "ide": {
+            "name": "MPLABX",
+            "semverRange": ">=5.40.0"
+        },
+        "compiler": [
+			{
+				"name": "XC8",
+				"semverRange": "^2.20.0"
+			}
+		],
+        "dfp": {
+            "name": "PIC18F-Q_DFP",
+            "semverRange": "^1.5.124"
+        },
+        "configurator": {
+            "name": "MCC",
+            "semverRange": ">=3.95.0"
+        },
+        "device": {
+            "metaDataVersion": "1.0.0",
+            "category": "com.microchip.portal.contentRef",
+            "content": {
+                "metaDataVersion": "1.0.0",
+                "category": "com.microchip.device",
+                "name": "PIC18F16Q41",
+                "versionRange": "*"
+            }
+        },
+        "author": "Microchip",
+        "subcategories": [
+            "MCC",
+            [
+               "Peripherals", "OPA"
+            ],
+            [
+               "Peripherals", "CMP"
+            ],
+            [
+               "Peripherals", "DAC"
+            ],
+            [
+               "Peripherals", "FVR"
+            ],
+            [
+               "Peripherals", "TMR1"
+            ]
+        ],
+        "peripherals": [
+            "OPA","CMP","DAC","FVR","TMR1"
+        ],
+        "keywords": [
+            "MCC",
+            "Intelligent Analog"
+        ],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./README.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}
