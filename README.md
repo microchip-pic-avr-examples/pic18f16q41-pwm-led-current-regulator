@@ -6,22 +6,21 @@ This code example implements a linear low-side current regulator for LEDs using 
 
 ## Related Documentation
 
-[TB3280: Using Operational Amplifiers in PIC16 and PIC18](http://ww1.microchip.com/downloads/en/DeviceDoc/Using-the-Operational-Amplifier-on-PIC16-and-PIC18-90003280A.pdf)  
-[TB3279: Optimizing Internal Operational Amplifiers for Analog Signal Conditioning](http://ww1.microchip.com/downloads/en/DeviceDoc/Optimizing-Internal-Operational-Amplifiers-for-Analog-Signal-Conditioning-90003279A.pdf)  
-[AN3521: Analog Sensor Measurement and Acquisition](http://www.microchip.com/wwwappnotes/appnotes.aspx?appnote=en1002264)  
-
-[Code Example: Linear LED Current Regulator using PIC18F16Q41](https://github.com/microchip-pic-avr-examples/pic18f16q41-linear-led-current-regulator)  
+[TB3280: Using Operational Amplifiers in PIC16 and PIC18](https://www.microchip.com/en-us/application-notes/tb3280)  
+[TB3279: Optimizing Internal Operational Amplifiers for Analog Signal Conditioning](https://www.microchip.com/en-us/application-notes/tb3279)  
+[AN3521: Analog Sensor Measurement and Acquisition](https://www.microchip.com/en-us/application-notes/an3521)  
+[Code Example: Linear LED Current Regulator using PIC18F16Q41](https://mplab-discover.microchip.com/com.microchip.mcu8.mplabx.project.pic18f16q41-linear-led-current-regulator)  
 
 ## Software Used
 
-* <a href="http://www.microchip.com/mplab/mplab-x-ide">MPLAB® IDE 5.40 or newer</a>
-* <a href="https://www.microchip.com/mplab/compilers">Microchip XC8 Compiler 2.20 or newer</a>
-* <a href="https://www.microchip.com/mplab/mplab-code-configurator">MPLAB® Code Configurator (MCC) 3.95.0 or newer</a>
+* <a href="https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_PIC18-Q41&utm_content=pic18f16q41-pwm-led-current-regulator-github&utm_bu=MCU08">MPLAB® X IDE v5.40 or newer</a>
+* <a href="https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_PIC18-Q41&utm_content=pic18f16q41-pwm-led-current-regulator-github&utm_bu=MCU08">MPLAB XC8 Compiler v2.20 or newer</a>
+* <a href="https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_PIC18-Q41&utm_content=pic18f16q41-pwm-led-current-regulator-github&utm_bu=MCU08">MPLAB Code Configurator (MCC) Classic v3.95.0 or newer</a>
 
 ## Hardware Used
 
-* <a href="https://www.microchip.com/wwwproducts/en/PIC18F16Q41">PIC18F16Q41</a><br>
-* <a href="https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM164137"> Microchip Curiosity Development Board (DM164137), Rev 4 </a>
+* <a href="https://www.microchip.com/en-us/product/PIC18F16Q41?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_PIC18-Q41&utm_content=pic18f16q41-pwm-led-current-regulator-github&utm_bu=MCU08">PIC18F16Q41</a><br>
+* <a href="https://www.microchip.com/en-us/development-tool/DM164137?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_PIC18-Q41&utm_content=pic18f16q41-pwm-led-current-regulator-github&utm_bu=MCU08"> Microchip Curiosity Development Board (DM164137), Rev 4 </a>
 
 ## External Parts Required
 
